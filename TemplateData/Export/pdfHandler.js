@@ -52,6 +52,36 @@ var cuttingPlanHandler = {
         doc.save(cuttingPlan.name + '.pdf');
         this.createcsv(csv,"cuttingPlan");
         this.createcsv(csv2,"drillingPlan");
+
+        this.sendEmail();
+
+    },
+
+    sendEmail: async function() {
+        emailjs.init("6VpZQD9hnynV8YDu9"); // Replace with your EmailJS User ID
+        const templateParams = {
+            to_email: "iam@davidneudecker.com",
+            subject: "test",
+            message: "HI",
+            // attachments: [
+            //     {
+            //         filename: file.name,
+            //         content: base64File,
+            //         type: file.type,
+            //     }
+            // ]
+        };
+
+        // Send email with attachment
+        try {
+            await emailjs.send("service_jitjt2l", "template_doyiuen", templateParams);
+            alert("Email sent successfully!");
+        } catch (error) {
+            console.error("Failed to send email:", error);
+            alert("Failed to send email.");
+        }
+    
+        
     },
 
     createcsv: function (rows,name) {
