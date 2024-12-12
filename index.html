@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <title>Modra 3D</title>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"> </script>
-     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+     <script type="text/javascript"
+     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+   emailjs.init({
+     publicKey: "6VpZQD9hnynV8YDu9",
+   });
+})();
+</script>
      <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

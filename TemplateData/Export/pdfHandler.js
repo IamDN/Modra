@@ -58,7 +58,7 @@ var cuttingPlanHandler = {
     },
 
     sendEmail: async function() {
-        emailjs.init("6VpZQD9hnynV8YDu9"); // Replace with your EmailJS User ID
+ 
         const templateParams = {
             to_email: "iam@davidneudecker.com",
             subject: "test",
